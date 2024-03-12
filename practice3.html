@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "UTF-8" />
+    <script>
+      function mouseDo() {
+        document.getElementById('t2').innerHTML += '[Down]';
+      }
+
+      function mouseUp() {
+        document.getElementById('t2').innerHTML += '[Up]';
+      }
+
+      function mouseOv() {
+        document.getElementById('t2').innerHTML += '[Over]';
+      }
+
+      function mouseOu() {
+        document.getElementById('t2').innerHTML += '[Out]';
+      }
+
+      function mouseMo() {
+        document.getElementById('t2').innerHTML += '[Move]';
+      }
+    </script>
+  </head>
+  <body>
+    <input type = "button" value="Hover your mouse." size = "500" onmousedown = "mouseDo()" onmouseup = "mouseUp()" onmouseover = "mouseOv()" onmouseout = "mouseOu()" onmousemove = "mouseMo()">
+    <div id = "t2">Event: </div>
+  </body>
+</html>
