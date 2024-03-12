@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "UTF-8" />
+    <script>
+      let keydown = 0;
+
+      function keyD() {
+      	if(keydown%2 == 0) {
+          document.getElementById("down").innerHTML = "□" ;
+       	} else {
+          document.getElementById("down").innerHTML = "■" ;
+       	}
+      	keydown++;
+      	console.log(keydown);
+      }
+
+      let keypress = 0;
+
+      function keyP() {
+      	if(keypress%2 == 0) {
+          document.getElementById("press").innerHTML = "□" ;
+       	} else {
+          document.getElementById("press").innerHTML = "■" ;
+       	}
+      	keypress++;
+      	console.log(keypress);
+      }
+
+      let keyup = 0;
+
+      function keyU() {
+      	if(keyup%2 == 0) {
+          document.getElementById("up").innerHTML = "□" ;
+       	} else {
+          document.getElementById("up").innerHTML = "■" ;
+       	}
+      	keyup++;
+      	console.log(keyup);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="check">
+      <p>入力文字：<input type = "text" size = "40" onkeydown = "keyD()" onkeypress = "keyP()" onkeyup = "keyU()"></p>
+      <p>keyDown：<span id = "down"></span></p>
+      <p>keyPress：<span id = "press"></span></p>
+      <p>keyUp　：<span id = "up"></span></p>
+    </form>
+  </body>
+</html>
